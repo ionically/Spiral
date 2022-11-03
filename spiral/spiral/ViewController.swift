@@ -9,19 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     //made globle to tracklayer
-    var trackLayer = CAShapeLayer()
+   
+    @IBOutlet weak var hideShowImage: UIImageView!
+   
     
-    var circleIsShown: Bool = true
     
     @IBAction func clickAction(_ sender: UIButton) {
        
-        if circleIsShown {
+        if hideShowImage.isHidden {
             
-            hideCircle()
+            showImage()
             
         } else {
             
-            showCircle()
+            hideImage()
         }
         
     }
@@ -30,38 +31,25 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        showCircle()
+        showImage()
         
     }
   
-    func showCircle() {
-        circleIsShown = true
-        drawCircleObject()
-        view.layer.addSublayer(trackLayer)
+    func showImage() {
+        
+        hideShowImage.isHidden = false
+      
+       
         
     }
     
-    func hideCircle() {
-        circleIsShown = false
+    func hideImage() {
+        
+        hideShowImage.isHidden = true
         //remove by superlayer means hide
-        trackLayer.removeFromSuperlayer()
-        trackLayer = CAShapeLayer()
         
     }
     
-    func drawCircleObject() {
-        
-        let centre = view.center
-        
-        let circularPath = UIBezierPath(arcCenter: centre, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        
-        trackLayer.path = circularPath.cgPath
-        
-        trackLayer.strokeColor = UIColor.red.cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        
-    }
     
     
     
