@@ -18,11 +18,11 @@ class ViewController: UIViewController {
        
         if hideShowImage.isHidden {
             
-            showImage()
+            hideImage()
             
         } else {
             
-            hideImage()
+            showImage()
         }
         
     }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
   
     func showImage() {
         
-        hideShowImage.isHidden = false
+        hideShowImage.isHidden = true
       
        
         
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     func hideImage() {
         
-        hideShowImage.isHidden = true
+        hideShowImage.isHidden = false
         //remove by superlayer means hide
         
     }
