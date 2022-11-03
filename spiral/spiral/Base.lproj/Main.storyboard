@@ -29,6 +29,10 @@
                                     <action selector="clickAction:" destination="BYZ-38-t0r" eventType="touchDown" id="chn-pf-SRL"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="design 1" id="bw0-IA-stX">
+                                <rect key="frame" x="133" y="379" width="142" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,6 +45,7 @@
     </scenes>
     <resources>
         <image name="design" width="298" height="472"/>
+        <image name="design 1" width="1192" height="594"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
